@@ -19,6 +19,11 @@
 <body>
     <header class="header">
         <div class="logo"><img src="./images/procodeLogo.png" alt="PROCODE Logo" width="50px"></div>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         <nav class="nav">
             <a href="./index.html">Home</a>
             <a href="./coaching.html">Coaching</a>
@@ -148,6 +153,15 @@
     <footer>
         <p style="text-align: center;margin: 1rem;">&copy; 2024 PROCODE. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+        const nav = document.querySelector('.nav');
+        const hamburger = document.querySelector('.hamburger');
+        nav.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    }
+      </script>
 </body>
 
 </html>
