@@ -67,6 +67,89 @@ h1, h2 {
     transform: translateY(-3px);
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header {
+      flex-direction: column;
+      padding: 1rem;
+  }
+
+  .logo img {
+      width: 40px;  /* Adjust logo size for smaller screens */
+      margin-bottom: 1rem;
+  }
+
+  .nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1rem;
+  }
+
+  .nav a {
+      margin: 0.5rem 0;
+      font-size: 1rem;
+  }
+
+  .sign-up-btn {
+      width: 100%;
+      text-align: center;
+  }
+}
+
+/* Mobile Menu Toggle (Optional) */
+@media (max-width: 480px) {
+  .nav {
+      display: none;  /* Hide navigation by default on mobile */
+      width: 100%;
+  }
+
+  .nav.active {
+      display: flex;  /* Show nav when active */
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .header {
+      position: relative;
+  }
+
+  .sign-up-btn {
+      margin-top: 1rem;
+      width: 100%;
+      text-align: center;
+  }
+
+  /* Hamburger menu styles */
+  .hamburger {
+      display: block;
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      cursor: pointer;
+  }
+
+  .hamburger div {
+      width: 30px;
+      height: 3px;
+      background-color: #FFD700;
+      margin: 6px 0;
+      transition: transform 0.3s ease;
+  }
+
+  .hamburger.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .hamburger.active div:nth-child(2) {
+      opacity: 0;
+  }
+
+  .hamburger.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
@@ -262,6 +345,103 @@ h1, h2 {
     color: white;
     font-size: 1rem;
   }
+
+  /* Responsive Design */
+@media (max-width: 1024px) {
+  /* For tablets and smaller screens */
+  .hero h1 {
+      font-size: 2.5rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .carousel-caption h2 {
+      font-size: 1.8rem;
+  }
+
+  .carousel-caption p {
+      font-size: 0.9rem;
+  }
+
+  .news-article {
+      width: 45%;
+  }
+
+  .prev-btn, .next-btn {
+      font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* For mobile screens */
+  .hero {
+      padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .hero p {
+      font-size: 1rem;
+  }
+
+  .carousel-caption h2 {
+      font-size: 1.6rem;
+  }
+
+  .carousel-caption p {
+      font-size: 0.9rem;
+  }
+
+  .news-articles {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .news-article {
+      width: 80%;
+      margin-bottom: 20px;
+  }
+
+  .prev-btn, .next-btn {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For very small screens (phones in portrait mode) */
+  .hero {
+      padding: 2rem 1rem;
+  }
+
+  .hero h1 {
+      font-size: 1.8rem;
+  }
+
+  .hero p {
+      font-size: 0.9rem;
+  }
+
+  .carousel-caption h2 {
+      font-size: 1.4rem;
+  }
+
+  .carousel-caption p {
+      font-size: 0.8rem;
+  }
+
+  .news-article {
+      width: 100%;
+      margin-bottom: 20px;
+  }
+
+  .prev-btn, .next-btn {
+      font-size: 1.3rem;
+  }
+}
   
   /* Partners Section */
 
@@ -916,22 +1096,21 @@ h1, h2 {
   
 /* Signup/Login page */
 .auth-container {
-    display: none;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    background-color: #2A2E30;
-    max-width: 600px;
-    width: 100%;
-    margin-left: 30rem;
-    margin-top: 2rem;
+  display: none;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: #2A2E30;
+  max-width: 600px;
+  width: 100%;
+  margin: 2rem auto;
 }
 
 .auth-box h2 {
-    font-size: 2rem;
-    color: #FFD700;
-    text-align: center;
-    margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #FFD700;
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 .auth-box form {
@@ -980,6 +1159,56 @@ h1, h2 {
 
 .auth-box .toggle-link:hover {
     text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Center auth container for smaller screens */
+  .auth-container {
+      margin: 1rem;
+      padding: 1.5rem;
+  }
+
+  .auth-box h2 {
+      font-size: 1.8rem; /* Slightly smaller heading */
+  }
+
+  .auth-box input {
+      font-size: 1rem; /* Ensure text input is readable */
+  }
+
+  .auth-box button {
+      font-size: 1rem; /* Slightly smaller button for mobile */
+  }
+
+  .auth-box p {
+      font-size: 0.9rem; /* Adjust paragraph text size */
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-container {
+      padding: 1rem; /* Reduce padding on mobile */
+      margin: 0.5rem; /* Reduce margins for mobile */
+  }
+
+  .auth-box h2 {
+      font-size: 1.6rem; /* Adjust heading size */
+  }
+
+  .auth-box input {
+      padding: 0.6rem; /* Slightly smaller input for mobile */
+      font-size: 1rem; /* Ensure readability */
+  }
+
+  .auth-box button {
+      padding: 0.8rem; /* Adjust button size for mobile */
+      font-size: 1rem; /* Adjust button text size */
+  }
+
+  .auth-box p {
+      font-size: 0.8rem; /* Adjust footer text size */
+  }
 }
 
 /* Plan Options */
