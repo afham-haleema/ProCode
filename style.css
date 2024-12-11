@@ -1,0 +1,1271 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+    background-color: #181A1B;
+    color: #E4E4E4;
+    line-height: 1.6;
+}
+
+a {
+    color: #F1F1F1;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+a:hover {
+    color: #FFD700; 
+    transform: scale(1.05);
+}
+
+h1, h2 {
+    font-weight: 600;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem;
+    background-color: #2A2E30;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    border-radius:50%;
+}
+
+.nav a {
+    margin: 0 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.nav a:hover {
+    color: #FFD700;
+}
+
+.sign-up-btn {
+    background-color: #FFD700;
+    color: #181A1B;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sign-up-btn:hover {
+    background-color: #FFB300;
+    color: #181A1B;
+    transform: translateY(-3px);
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: #2C3134;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    color: #FFD700;
+}
+
+.hero p {
+    margin: 1.2rem 0;
+    font-size: 1.1rem;
+}
+
+.cta-btn {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #181A1B;
+    padding: 0.75rem 1.6rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #FFB300;
+    transform: scale(1.05);
+}
+
+/* Section Styles */
+.section {
+    padding: 3rem 2rem;
+    text-align: center;
+    background-color: #2C3134;
+    margin-bottom: 2rem;
+}
+
+.section h2 {
+    color: #FFD700;
+    font-size: 2rem;
+}
+
+.section ul {
+    list-style-type: none;
+    margin-top: 1rem;
+}
+
+.section ul li {
+    margin: 0.6rem 0;
+    font-size: 1.1rem;
+    color: #E4E4E4;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 1.2rem;
+    background-color: #2A2E30;
+    color: #E4E4E4;
+}
+.footer-nav a {
+    margin: 0 0.7rem;
+    font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+    color: #FFD700;
+}
+
+/* Hero Carousel */
+.hero-carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+    background-color: #32373D;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    height: 400px;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+}
+
+.carousel-caption h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #DBFE0C;
+}
+
+.carousel-caption p {
+    font-size: 1rem;
+}
+
+/* Carousel Navigation Buttons */
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(50, 55, 61, 0.8);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: #DBFE0C;
+    color: #32373D;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Section Containers */
+.news-section, .partners-section, .about-us-section {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #181A1B;
+    margin-bottom: 30px;
+  }
+  
+  .news-section h2, .partners-section h2, .about-us-section h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 20px;
+  }
+  
+  /* News Section */
+
+
+  .news-articles {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .news-article {
+    width: 30%;
+    background-color: #32373D;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .news-article:hover {
+    transform: translateY(-10px);
+  }
+  
+  .news-article h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 10px;
+  }
+  
+  .news-article p {
+    color: white;
+    font-size: 1rem;
+  }
+  
+  /* Partners Section */
+
+  .partners-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .partners-list img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .partners-list img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* About Us Section */
+  .about-us-section {
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .about-us-section p {
+    color: white;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  
+
+
+/* Coaching page */
+
+/* Coaching Dashboard Section */
+.coaching-dashboard {
+    text-align: center;
+    padding: 3rem 2rem;
+    background-color: #343437;
+}
+
+.coaching-dashboard h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.coaching-dashboard p {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.feature {
+    background-color: #2B2B2B;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature h2 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.feature p {
+    margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+    background-color: #FF4500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    color: white;
+    border: none;
+}
+
+.cta-btn:hover {
+    background-color: #FF5733;
+}
+
+/* Booking Form */
+.booking-form {
+    padding: 3rem 2rem;
+    background-color: #2B2B2B;
+    margin-top: 2rem;
+    border-radius: 8px;
+    width: 80%;
+    margin: 2rem auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.booking-form h2 {
+    margin-bottom: 1.5rem;
+}
+
+.booking-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.booking-form label {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.booking-form select,
+.booking-form input {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #FF4500;
+    background-color: #343437;
+    color: white;
+}
+
+.booking-form button {
+    background-color: #FF4500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+    background-color: #FF5733;
+}
+
+/* Progress Tracker */
+.progress-tracker {
+    padding: 3rem 2rem;
+    background-color: #2B2B2B;
+    margin: 2rem auto;
+    border-radius: 8px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.progress-tracker h2 {
+    margin-bottom: 1rem;
+}
+
+.progress-tracker ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.progress-tracker li {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+/* Coaches Section */
+.coaches {
+    padding: 3rem 2rem;
+    background-color: #2B2B2B;
+    margin: 2rem auto;
+    border-radius: 8px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.coaches h2 {
+    margin-bottom: 1.5rem;
+}
+
+.coaches-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.coach {
+    background-color: #343437;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.coach h3 {
+    margin-bottom: 0.5rem;
+}
+
+.coach p {
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2B2B2B;
+}
+
+.footer-nav a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+    color: #FF4500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        width: 90%;
+    }
+
+    .coaches-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .coach {
+        width: 90%;
+    }
+}
+
+/* Tournament */
+
+
+.tournament-hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: #4E4E50;
+}
+
+.tournament-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tournament-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.cta-btn {
+    background-color: #FF4500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    color: white;
+    text-decoration: none;
+}
+
+.cta-btn:hover {
+    background-color: #FF5733;
+}
+
+/* Section Styles */
+.section {
+    padding: 3rem 2rem;
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.section p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+/* Tournament Grid */
+.tournament-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.tournament-card {
+    background-color: #2B2B2B;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tournament-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.tournament-card p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Past Tournaments */
+.past-tournaments-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.past-tournament {
+    background-color: #343437;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.past-tournament h3 {
+    margin-bottom: 0.5rem;
+}
+
+/* Rules Section */
+.rules-list {
+    list-style: none;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.rules-list li {
+    margin: 1rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2B2B2B;
+}
+
+.footer-nav a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+}
+
+.footer-nav a:hover {
+    color: #FF4500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .tournament-grid,
+    .past-tournaments-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tournament-card,
+    .past-tournament {
+        width: 90%;
+    }
+}
+
+/* Content Library */
+
+  .library-hero {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: #4E4E50;
+  }
+  
+  .library-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .library-hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-btn {
+    background-color: #FF4500;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .cta-btn:hover {
+    background-color: #FF5733;
+  }
+  
+  /* Section Styles */
+  .section {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .section p {
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Categories Grid */
+  .categories-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .category-card {
+    background-color: #2B2B2B;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .category-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  /* Content Grid */
+  .content-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .content-card {
+    background-color: #343437;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: left;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .content-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  
+  /* Search Section */
+  .search-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .search-input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+  }
+  
+  .search-btn {
+    background-color: #FF4500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+  
+  .search-btn:hover {
+    background-color: #FF5733;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2B2B2B;
+  }
+  
+  .footer-nav a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-nav a:hover {
+    color: #FF4500;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .categories-grid, .content-grid {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .category-card, .content-card {
+      width: 90%;
+    }
+  }
+
+  /* Feedback */
+ 
+
+  
+  /* Feedback Section */
+  .feedback-section {
+    padding: 4rem 2rem;
+    text-align: center;
+    background-color: #4E4E50;
+  }
+  
+  .feedback-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feedback-section p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  /* Feedback Form Styles */
+  .feedback-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #343437;
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .feedback-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .feedback-form input, .feedback-form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #2B2B2B;
+    color: white;
+  }
+  
+  .feedback-form input:focus, .feedback-form textarea:focus {
+    outline: none;
+    border: 2px solid #FF4500;
+  }
+  
+  .feedback-form textarea {
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .submit-btn {
+    background-color: #FF4500;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #FF5733;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2B2B2B;
+  }
+  
+  .footer-nav a {
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .footer-nav a:hover {
+    color: #FF4500;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .feedback-form {
+      padding: 1.5rem;
+    }
+  
+    .submit-btn {
+      width: 100%;
+    }
+  }
+
+  /* Success Message Styles */
+.success-message {
+    background-color: #28a745;
+    padding: 2rem;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .success-message h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .success-message p {
+    font-size: 1.2rem;
+  }
+  
+/* Signup/Login page */
+.auth-container {
+    display: none;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #2A2E30;
+    max-width: 600px;
+    width: 100%;
+    margin-left: 30rem;
+    margin-top: 2rem;
+}
+
+.auth-box h2 {
+    font-size: 2rem;
+    color: #FFD700;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.auth-box form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-box input {
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #444;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #333;
+    color: #E4E4E4;
+}
+
+.auth-box input::placeholder {
+    color: #B0B0B0;
+}
+
+.auth-box button {
+    background-color: #FFD700;
+    color: #181A1B;
+    border: none;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-box button:hover {
+    background-color: #FFB300;
+}
+
+.auth-box p {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.auth-box .toggle-link {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.auth-box .toggle-link:hover {
+    text-decoration: underline;
+}
+
+/* Plan Options */
+.plans {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.plan {
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 45%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.plan h3 {
+    font-size: 1.5rem;
+    color: #FFD700;
+}
+
+.plan p {
+    font-size: 1.2rem;
+    color: #E4E4E4;
+    margin-bottom: 1rem;
+}
+
+.plan input[type="radio"] {
+    width: 60px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+/* Display Login Page Initially */
+#login-page {
+    display: block;
+}
+
+/* Add transition effects for forms */
+.auth-box {
+    transition: all 0.3s ease-in-out;
+}
+
+/* Coach dashboard page */
+
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', Arial, sans-serif;
+}
+
+body {
+  background-color: #181A1B;
+  color: #E4E4E4;
+  line-height: 1.6;
+}
+
+a {
+  color: #F1F1F1;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+  color: #FFD700; 
+  transform: scale(1.05);
+}
+
+h1, h2 {
+  font-weight: 600;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1rem;
+  background-color: #2A2E30;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo img {
+  border-radius:50%;
+}
+
+.nav a {
+  margin: 0 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #FFD700;
+}
+
+/* Coaching Dashboard */
+.coaching-dashboard {
+  text-align: center;
+  padding: 3rem 2rem;
+  background-color: #343437;
+}
+
+.coaching-dashboard h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.coaching-dashboard p {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.feature {
+  background-color: #2B2B2B;
+  padding: 2rem;
+  border-radius: 8px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.feature h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.feature p {
+  margin-bottom: 1.5rem;
+}
+
+.cta-btn {
+  background-color: #FF4500;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  color: white;
+  border: none;
+}
+
+.cta-btn:hover {
+  background-color: #FF5733;
+}
+
+/* Content Box Styles */
+.content-box {
+  margin-top: 2rem;
+  background-color: #2B2B2B;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  color: #FFD700;
+}
+
+.content-box h3 {
+  margin-bottom: 1rem;
+}
+
+.content-box p {
+  margin-bottom: 1rem;
+}
+
+/* Session Cards */
+.session-card, .progress-card {
+  background-color: #343437;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  color: #F1F1F1;
+}
+
+.session-card h4, .progress-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: #FF4500;
+}
+
+.session-card p, .progress-card p {
+  margin: 0.5rem 0;
+}
+
+.session-card ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.session-card ul li {
+  margin-bottom: 0.5rem;
+}
+
+.session-card, .progress-card {
+  font-size: 1rem;
+}
+
+.progress-card ul li {
+  color: #FFD700;
+}
+
+.progress-card p {
+  font-size: 1.1rem;
+  color: #F1F1F1;
+}
+
+.progress-card h4 {
+  font-size: 1.3rem;
+  color: #FF5733;
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #FFD700;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Progress Card Styling */
+.progress-card {
+  background-color: #2A2A2A;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Progress Header */
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.player-name {
+  font-size: 1.6rem;
+  color: #FFD700;
+  font-weight: bold;
+}
+
+.rank {
+  color: orange;
+  padding: 0.5rem;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.rank-level {
+  font-size: 1.1rem;
+}
+
+/* Progress Details */
+.progress-details h5 {
+  color: #FF4500;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.improvement-text, .goal-text {
+  font-size: 1rem;
+  color: #FFD700;
+  margin-bottom: 0.8rem;
+}
+
+/* Next Goals */
+.goal-text {
+  font-size: 1.1rem;
+  color: #F1F1F1;
+}

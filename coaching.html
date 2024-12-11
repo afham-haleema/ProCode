@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coaching Dashboard - PROCODE</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo"><img src="./images/procodeLogo.png" alt="PROCODE Logo" width="50px"></div>
+    <nav class="nav">
+      <a href="./index.html">Home</a>
+      <a href="./coaching.html">Coaching</a>
+      <a href="./tournament.html">Tournaments</a>
+      <a href="./contentLibrary.html">Content Library</a>
+      <a href="./feedback.html">Feedback</a>
+      <a href="./coach-registration.html">Become a Coach</a>
+    </nav>
+    <a href="./login.html" class="sign-up-btn">Sign Up</a>
+  </header>
+
+
+  <!-- Coaching Section -->
+  <section class="section coaching-dashboard">
+    <h1>Coaching Dashboard</h1>
+    <p>Take your gaming skills to the next level with personalized coaching, progress tracking, and expert advice.</p>
+
+    <!-- Features Section -->
+    <div class="features">
+      <div class="feature">
+        <h2>Book Coaching Sessions</h2>
+        <p>Schedule 1-on-1 sessions with professional coaches for tailored training.</p>
+        <button class="cta-btn" onclick="bookSession()">Book Now</button>
+      </div>
+
+      <div class="feature">
+        <h2>Track Your Progress</h2>
+        <p>Monitor your performance, analyze stats, and achieve your gaming goals.</p>
+        <button class="cta-btn" onclick="viewProgress()">View Progress</button>
+      </div>
+
+      <div class="feature">
+        <h2>Connect with Top Coaches</h2>
+        <p>Access a network of top-rated coaches across various esports games.</p>
+        <button class="cta-btn" onclick="connectCoaches()">Connect</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Form (Hidden Initially) -->
+  <section class="booking-form" id="bookingForm" style="display: none;">
+    <h2>Book Your Coaching Session</h2>
+    <form>
+      <label for="game">Select Your Game:</label>
+      <select id="game" name="game" required>
+        <option value="fortnite">Fortnite</option>
+        <option value="valorant">Valorant</option>
+        <option value="dota2">DOTA 2</option>
+        <option value="league">League of Legends</option>
+      </select>
+
+      <label for="coach">Choose a Coach:</label>
+      <select id="coach" name="coach" required>
+        <option value="coach1">Coach Alex</option>
+        <option value="coach2">Coach Sam</option>
+        <option value="coach3">Coach Mia</option>
+      </select>
+
+      <label for="date">Pick a Date:</label>
+      <input type="date" id="date" name="date" required>
+
+      <label for="time">Pick a Time:</label>
+      <input type="time" id="time" name="time" required>
+
+      <button type="submit" class="cta-btn">Confirm Booking</button>
+    </form>
+  </section>
+
+  <!-- Progress Tracker Section -->
+  <section class="progress-tracker" id="progressTracker" style="display: none;">
+    <h2>Your Progress</h2>
+    <p>Track your progress and see your improvement over time.</p>
+    <ul>
+      <li><strong>Last Session:</strong> 95% performance in Fortnite build challenges</li>
+      <li><strong>Current Focus:</strong> Reflex training and aim precision</li>
+      <li><strong>Goals:</strong> Win 10 matches in ranked mode</li>
+    </ul>
+  </section>
+
+  <!-- Connect with Coaches -->
+  <section class="coaches" id="connectCoaches" style="display: none;">
+    <h2>Meet Our Coaches</h2>
+    <p>Connect with the best coaches to improve your gaming skills:</p>
+    <div class="coaches-list">
+      <div class="coach">
+        <h3>Coach Alex</h3>
+        <p>Specialized in Fortnite and Apex Legends</p>
+      </div>
+      <div class="coach">
+        <h3>Coach Sam</h3>
+        <p>Expert in Valorant and CS: GO strategies</p>
+      </div>
+      <div class="coach">
+        <h3>Coach Mia</h3>
+        <p>League of Legends and DOTA 2 master</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 PROCODE. All rights reserved.</p>
+    <nav class="footer-nav">
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+      <a href="#">Back to Top</a>
+    </nav>
+  </footer>
+
+  <script>
+    function bookSession() {
+      document.getElementById("bookingForm").style.display = "block";
+      document.getElementById("progressTracker").style.display = "none";
+      document.getElementById("connectCoaches").style.display = "none";
+    }
+
+    function viewProgress() {
+      document.getElementById("progressTracker").style.display = "block";
+      document.getElementById("bookingForm").style.display = "none";
+      document.getElementById("connectCoaches").style.display = "none";
+    }
+
+    function connectCoaches() {
+      document.getElementById("connectCoaches").style.display = "block";
+      document.getElementById("bookingForm").style.display = "none";
+      document.getElementById("progressTracker").style.display = "none";
+    }
+  </script>
+</body>
+</html>

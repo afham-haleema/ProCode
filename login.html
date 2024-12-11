@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up / Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo"><img src="./images/procodeLogo.png" alt="PROCODE Logo" width="50px"></div>
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./coaching.html">Coaching</a>
+          <a href="./tournament.html">Tournaments</a>
+          <a href="./contentLibrary.html">Content Library</a>
+          <a href="./feedback.html">Feedback</a>
+          <a href="./coach-registration.html">Become a Coach</a>
+        </nav>
+        <a href="./login.html" class="sign-up-btn">Sign Up</a>
+      </header>
+
+    <!-- Login Page -->
+    <section class="auth-container" id="login-page">
+        <div class="auth-box">
+            <h2>Login</h2>
+            <form action="#" method="POST">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+            <p>Don't have an account? <a href="#signup-page" class="toggle-link">Sign Up</a></p>
+        </div>
+    </section>
+
+    <!-- Sign Up Page -->
+    <section class="auth-container" id="signup-page" style="display:none;">
+        <div class="auth-box">
+            <h2>Sign Up</h2>
+            <form action="#" method="POST">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                
+                <div class="plans">
+                    <div class="plan basic">
+                        <h3>Basic</h3>
+                        <p>BHD6/month</p>
+                        <p>Access to AI-driven learning tools,Training Library, Basic Progress Tracking, Gamified Challenges, Limited Tournament Access</p>
+                        <input type="radio" name="plan" value="basic" id="basic" checked>
+                    </div>
+                    <div class="plan standard">
+                        <h3>Standard</h3>
+                        <p>BHD10/month</p>
+                        <p>Personalized Coaching, Advanced AI-driven Lessons, Extended Training Library, Premium Progress Tracking, Exclusive Tournaments and Competitions</p>
+                        <input type="radio" name="plan" value="standard" id="standard">
+                    </div>
+                </div>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#login-page" class="toggle-link">Login</a></p>
+        </div>
+    </section>
+
+    <script>
+        // Switch between login and sign up pages
+        const toggleLinks = document.querySelectorAll('.toggle-link');
+        toggleLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                const target = document.querySelector(e.target.getAttribute('href'));
+                document.querySelectorAll('.auth-container').forEach(section => section.style.display = 'none');
+                target.style.display = 'block';
+            });
+        });
+    </script>
+
+</body>
+</html>

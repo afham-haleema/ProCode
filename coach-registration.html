@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coach Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo"><img src="./images/procodeLogo.png" alt="PROCODE Logo" width="50px"></div>
+        <nav class="nav">
+          <a href="./index.html">Home</a>
+          <a href="./coaching.html">Coaching</a>
+          <a href="./tournament.html">Tournaments</a>
+          <a href="./contentLibrary.html">Content Library</a>
+          <a href="./feedback.html">Feedback</a>
+          <a href="./coach-registration.html">Become a Coach</a>
+        </nav>
+        <a href="./login.html" class="sign-up-btn">Sign Up</a>
+      </header>
+
+      <section class="coaching-dashboard feedback-form" style="margin-top: 2rem;margin-bottom: 2rem;">
+        <h1>Coach Registration</h1>
+        <p>Become a coach and help players level up their skills.</p>
+        <div class="form-container">
+            <form class="registration-form">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="experience">Experience</label>
+                <textarea id="experience" name="experience" rows="4" required></textarea>
+
+                <label for="cv">Attach your resume</label>
+                <input type="file" name="cv" id="cv" accept=".pdf" required>
+
+                <button type="submit" class="cta-btn"><a href="./coach-dashboard.html">Register</a></button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-nav">
+            <a href="/">Home</a>
+            <a href="/about">About Us</a>
+            <a href="/contact">Contact</a>
+        </div>
+    </footer>
+
+
+    <footer>
+        <p style="text-align: center;margin: 1rem;">&copy; 2024 PROCODE. All rights reserved.</p>
+    </footer>
+</body>
+</html>
